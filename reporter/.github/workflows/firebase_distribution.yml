@@ -1,0 +1,68 @@
+#name: Release
+#
+#on:
+#  push:
+#    branches:
+#      - master
+#
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      - name: Build
+#        run: zip -r blankly_external ./blankly_external
+#      - name: Release
+#        uses: softprops/action-gh-release@v1
+#        if: startsWith(github.ref, 'refs/tags/')
+#        with:
+#          files: |
+#            blankly_external.zip
+
+
+# This runs all blankly Module Tests
+
+name: Reporter Distribution
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # These comments allow a definition for the matrix runner
+    # this is currently not active because it wastes minutes for no reason
+    #    runs-on: ${{ matrix.os }}
+
+    #    strategy:
+    #      matrix:
+    #        os: [ubuntu-latest]
+    #        python-version: ['3.7', '3.8', '3.9', '3.10']
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7 # ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .
+    - name: Inject Keys
+      run: |
+        echo "$KEYS_FILE" > ./key.json
+      shell: bash
+      env:
+        KEYS_FILE: ${{ secrets.FIREBASE_KEYS }}
+    - name: Zip Files
+      run: |
+        chmod +x ./create_dist.sh
+        ./create_dist.sh
+    - name: Run Upload File
+      run: |
+        python ./upload_dist.py 0 3.7

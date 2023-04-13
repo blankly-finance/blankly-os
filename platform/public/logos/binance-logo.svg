@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="127px" viewBox="0 0 128 127" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-12.000000, -1201.000000)" fill="#F3BA2F" fill-rule="nonzero">
+            <g id="binance" transform="translate(11.000000, 1201.000000)">
+                <g id="Group-4" transform="translate(0.643981, 0.000000)">
+                    <polygon id="Path" points="39.5270189 53.203 64.1150189 28.616 88.7160189 53.216 103.023019 38.909 64.1150189 0 25.2200189 38.896"></polygon>
+                    <rect id="Rectangle" transform="translate(15.116403, 63.303615) rotate(45.000000) translate(-15.116403, -63.303615) " x="5" y="53.1867121" width="20.232806" height="20.233806"></rect>
+                    <polygon id="Path" points="39.5270189 73.408 64.1150189 97.995 88.7150189 73.396 103.030019 87.695 103.023019 87.703 64.1150189 126.611 25.2190189 87.716 25.1990189 87.696"></polygon>
+                    <rect id="Rectangle" transform="translate(113.115025, 63.310356) rotate(135.000000) translate(-113.115025, -63.310356) " x="102.998122" y="53.1939527" width="20.233806" height="20.232806"></rect>
+                    <polygon id="Path" points="78.6270189 63.298 78.6330189 63.298 64.1150189 48.78 53.3860189 59.509 53.3850189 59.509 52.1530189 60.742 49.6100189 63.285 49.6100189 63.285 49.5900189 63.305 49.6100189 63.326 64.1150189 77.831 78.6330189 63.313 78.6400189 63.305"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

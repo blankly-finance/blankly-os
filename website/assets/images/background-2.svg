@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="612px" height="953px" viewBox="0 0 612 953" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Illustration</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="53.2864451%" y1="17.6320226%" x2="46.9397909%" y2="80.1406929%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="40.6551733%" y1="84.9067789%" x2="55.5744127%" y2="8.66087123%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="51.2556322%" y1="15.5503664%" x2="48.7443837%" y2="84.4491866%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="65.6407358%" y1="-21.5483163%" x2="41.8954279%" y2="88.4247087%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="114.653101%" y1="50.0074724%" x2="8.22910974%" y2="49.9952448%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="48.3624688%" y1="83.3690633%" x2="51.6409375%" y2="16.561513%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="60.2811897%" y1="6.71683519%" x2="45.2464702%" y2="70.0120829%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="59.3515805%" y1="32.2077059%" x2="40.6484195%" y2="67.7922941%" id="linearGradient-8">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="59.351634%" y1="32.2075882%" x2="40.648366%" y2="67.7924118%" id="linearGradient-9">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="54.4499515%" y1="11.9278131%" x2="44.4319191%" y2="97.6385932%" id="linearGradient-10">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Illustrations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="#17" transform="translate(-269.000000, -99.000000)">
+            <g id="Illustration" transform="translate(269.000000, 99.000000)">
+                <path d="M237.1,2.1 C243.4,5.7 248.4,14.5 248.4,21.7 L248.4,214.9 L305.7,248 L305.7,447.3 C305.7,454.5 300.6,457.4 294.4,453.8 C288.1,450.2 283.1,441.4 283.1,434.2 L283.1,261 L225.7,228 L225.7,8.6 C225.7,1.4 230.8,-1.5 237.1,2.1 Z" id="Path" fill="url(#linearGradient-1)" fill-rule="nonzero" opacity="0.3"></path>
+                <path d="M268.3,841.3 C274.6,844.9 279.6,842 279.6,834.8 L279.6,690 L336.9,723.1 L336.9,628.3 C336.9,621.1 331.8,612.3 325.6,608.7 C319.3,605.1 314.3,608 314.3,615.2 L314.3,683.9 L257,650.8 L257,821.7 C257,828.9 262.1,837.7 268.3,841.3 Z" id="Path" fill="url(#linearGradient-2)" fill-rule="nonzero" opacity="0.3"></path>
+                <path d="M356.4,143.9 C362.7,147.5 367.7,156.3 367.7,163.5 L367.7,492.2 C367.7,499.4 362.6,502.3 356.4,498.7 C350.1,495.1 345.1,486.3 345.1,479.1 L345.1,150.4 C345.1,143.2 350.2,140.3 356.4,143.9 Z" id="Path" fill="url(#linearGradient-3)" fill-rule="nonzero" opacity="0.3"></path>
+                <path d="M292.2,824.8 C292.2,844.6 280.6,854 266.3,845.7 C252,837.5 240.4,814.7 240.4,794.9 C240.4,775.1 252,765.7 266.3,774 C280.6,782.2 292.2,805 292.2,824.8 Z" id="Path" fill="#6EE7B7"></path>
+                <path d="M482.5,308.7 C476.2,305.1 471.2,308 471.2,315.2 L471.2,412.8 L413.9,379.7 L413.9,499.6 C413.9,506.8 419,515.6 425.2,519.2 C431.5,522.8 436.5,519.9 436.5,512.7 L436.5,418.9 L493.8,452 L493.8,328.3 C493.8,321.1 488.7,312.3 482.5,308.7 Z" id="Path" fill="url(#linearGradient-4)" fill-rule="nonzero" opacity="0.3"></path>
+                <path d="M507.9,343.2 C507.9,362.8 496.4,372 482.3,363.9 C468.2,355.7 456.7,333.3 456.7,313.7 C456.7,294.1 468.1,284.9 482.3,293 C496.5,301.2 507.9,323.6 507.9,343.2 Z" id="Path" fill="#F2C94C"></path>
+                <path d="M592.1,842.4 C592.1,835.2 587,826.4 580.8,822.8 L491.8,771.4 L491.8,696.9 L403.4,645.9 C397.1,642.3 392.1,645.2 392.1,652.4 C392.1,659.6 397.2,668.4 403.4,672 L469.2,710 L469.2,784.5 L580.9,848.9 C587.1,852.5 592.1,849.6 592.1,842.4 Z" id="Path" fill="url(#linearGradient-5)" fill-rule="nonzero" opacity="0.3"></path>
+                <path d="M377.3,950.8 C371,947.2 366,938.4 366,931.2 L366,694.2 C366,687 371.1,684.1 377.3,687.7 C383.6,691.3 388.6,700.1 388.6,707.3 L388.6,944.3 C388.6,951.5 383.5,954.4 377.3,950.8 Z" id="Path" fill="url(#linearGradient-6)" fill-rule="nonzero" opacity="0.3"></path>
+                <path d="M605.9,851 C605.9,870.8 594.3,880.2 580,871.9 C565.7,863.7 554.1,840.9 554.1,821.1 C554.1,801.3 565.7,791.9 580,800.2 C594.3,808.4 605.9,831.2 605.9,851 Z" id="Path" fill="#6EE7B7"></path>
+                <polygon id="Path" fill="url(#linearGradient-7)" fill-rule="nonzero" opacity="0.3" points="52 453.2 214.8 547.2 214.8 848.8 52 754.8"></polygon>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" opacity="0.15" points="77.8 645 174.8 701 174.8 712.9 77.8 656.9"></polygon>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" opacity="0.15" points="87.9 674.3 164.8 718.7 164.8 730.6 87.9 686.2"></polygon>
+                <polygon id="Path" fill="#F2C94C" points="114.1 728 0.9 662.6 0.9 696.3 114.2 761.7"></polygon>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" opacity="0.2" points="168.7 577.3 143.4 597.3 126.4 575.5 104.2 594.7 95.4 588.3 128.1 560.8 144.7 582.6 163 569"></polygon>
+                <path d="M187.7,576.8 C187.7,588.1 181.1,593.4 173,588.7 C164.9,584 158.3,571.1 158.3,559.8 C158.3,548.5 164.9,543.2 173,547.9 C181.1,552.6 187.7,565.6 187.7,576.8 Z" id="Path" fill="#F2C94C"></path>
+                <path d="M111.9,598.6 C111.9,609.9 105.3,615.2 97.2,610.5 C89.1,605.8 82.5,592.9 82.5,581.6 C82.5,570.3 89.1,565 97.2,569.7 C105.3,574.4 111.9,587.3 111.9,598.6 Z" id="Path" fill="#6EE7B7"></path>
+                <polygon id="Path" fill="url(#linearGradient-8)" fill-rule="nonzero" opacity="0.2" points="611.5 650.4 456.7 561 456.7 641.6 611.5 731"></polygon>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" opacity="0.15" points="496.3 603.4 542.9 630.3 542.9 640 496.3 613"></polygon>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" opacity="0.15" points="496.4 622.8 595.6 680 595.6 689.8 496.4 632.6"></polygon>
+                <path d="M488.2,606.2 C488.2,612.8 484.3,616 479.4,613.2 C474.5,610.4 470.6,602.7 470.6,596.1 C470.6,589.5 474.5,586.3 479.4,589.1 C484.3,591.9 488.2,599.6 488.2,606.2 Z" id="Path" fill="#F2994A"></path>
+                <polygon id="Path" fill="url(#linearGradient-9)" fill-rule="nonzero" opacity="0.2" points="214.3 403.9 59.5 314.5 59.5 395.1 214.3 484.5"></polygon>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" opacity="0.15" points="99.1 356.9 145.7 383.8 145.7 393.5 99.1 366.6"></polygon>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" opacity="0.15" points="99.2 376.3 198.4 433.5 198.4 443.3 99.2 386.1"></polygon>
+                <path d="M91,359.7 C91,366.3 87.1,369.5 82.2,366.7 C77.3,363.9 73.4,356.2 73.4,349.6 C73.4,343 77.3,339.8 82.2,342.6 C87,345.4 91,353.1 91,359.7 Z" id="Path" fill="#6EE7B7"></path>
+                <path d="M418.8,579.1 C418.8,628.1 390.1,651.3 354.8,630.9 C319.4,610.5 290.8,554.2 290.8,505.2 C290.8,456.2 319.5,433 354.8,453.4 C390.2,473.8 418.8,530.1 418.8,579.1 Z" id="Path" fill="url(#linearGradient-10)" fill-rule="nonzero" opacity="0.2"></path>
+                <g id="Group" transform="translate(261.000000, 466.000000)" fill="#FFFFFF" fill-rule="nonzero" opacity="0.4">
+                    <path d="M68.6,88.8 C70.3,88.3 71.2,86.5 71.2,83.4 C71.2,80.2 70.3,77.4 68.6,75.1 C66.8,72.8 64.2,70.6 60.8,68.7 C59.7,68.1 58.5,67.4 57.2,66.8 C55.9,66.1 54.8,65.5 53.8,65.1 L53.8,82.3 L60.1,85.9 C64.1,88.2 66.9,89.1 68.6,88.8 Z" id="Path"></path>
+                    <path d="M61.8,100.6 L53.7,95.9 L53.7,116.5 C54.7,117.2 55.7,117.9 56.7,118.5 C57.8,119.2 59,119.9 60.3,120.7 C64.2,122.9 67.3,124 69.7,123.8 C72.1,123.7 73.3,121.5 73.3,117.4 C73.3,113.8 72.3,110.6 70.3,107.9 C68.3,105.2 65.5,102.7 61.8,100.6 Z" id="Path"></path>
+                    <path d="M64,7.4 C28.6,-13 0,10.2 0,59.2 C0,108.2 28.7,164.5 64,184.9 C99.4,205.3 128,182.1 128,133.1 C128,84.1 99.3,27.8 64,7.4 Z M79.8,140.4 C76.4,141.7 71.7,141 65.7,138.3 L65.7,150.3 L53.4,143.2 L53.4,131.3 C52.5,130.8 51.7,130.2 50.8,129.6 C47.7,127.5 44.5,125 41.1,122.1 L41.1,44.7 C43.7,45.5 46.6,46.7 49.8,48.2 C51,48.7 52.2,49.3 53.4,49.9 L53.4,38 L65.7,45.1 L65.6,57.3 C66.6,58.1 67.6,58.8 68.5,59.6 C71.6,62.1 74.3,64.9 76.5,67.9 C78.7,70.9 80.4,74.3 81.6,77.9 C82.9,81.5 83.5,85.4 83.5,89.6 C83.5,96 81.3,99.8 76.9,100.9 C80.6,104.9 83.1,108.9 84.4,113 C85.7,117 86.4,121.2 86.4,125.3 C86.4,133.7 84.2,138.7 79.8,140.4 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

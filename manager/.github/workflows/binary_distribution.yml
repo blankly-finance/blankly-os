@@ -1,0 +1,35 @@
+name: Backend Binary Distribution
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Inject Keys
+        run: |
+          echo "$KEYS_FILE" > ./key.json
+        shell: bash
+        env:
+          KEYS_FILE: ${{ secrets.FIREBASE_KEYS }}
+      - name: Create Distribution
+        run: |
+          mkdir minified
+          node minify.js
+      - name: Upload
+        run: |
+          node ./binary_upload.js

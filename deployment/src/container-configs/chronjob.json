@@ -1,0 +1,39 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "CronJob",
+  "metadata": {
+    "name": "signal"
+  },
+  "spec": {
+    "schedule": "*/1 * * * *",
+    "jobTemplate": {
+      "spec": {
+        "template": {
+          "spec": {
+            "containers": [
+              {
+                "name": "<Modified to ID>",
+                "image": "<Modified to URL>",
+                "ports": [
+                  {"containerPort": 8000}
+                ],
+                "resources": {
+                  "requests": {
+                    "memory": "0Mi",
+                    "cpu": "0m"
+                  },
+                  "limits": {
+                    "memory": "<Modified later>",
+                    "cpu": "<Modified later>"
+                  }
+                },
+                "env": []
+              }
+            ],
+            "restartPolicy": "Never"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "blankly-6ada5"
+  },
+  "targets": {
+    "blankly-6ada5": {
+      "hosting": {
+        "website": [
+          "blankly-6ada5"
+        ]
+      }
+    }
+  }
+}

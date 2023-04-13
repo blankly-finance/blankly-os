@@ -1,0 +1,236 @@
+/*******************************************************************/
+/*                                                                 */
+/*                  BLANKLY FINANCE CONFIDENTIAL                   */
+/*                   _ _ _ _ _ _ _ _ _ _ _ _ _                     */
+/*                                                                 */
+/* Copyright 2022 Blankly Finance Incorporated                     */
+/* All Rights Reserved.                                            */
+/*                                                                 */
+/* NOTICE:  All information contained herein is, and remains the   */
+/* property of Blankly Finance Incorporated and its suppliers, if  */
+/* any.  The intellectual and technical concepts contained         */
+/* herein are proprietary to Blankly Finance Incorporated and its  */
+/* suppliers and may be covered by U.S. and Foreign Patents,       */
+/* patents in process, and are protected by trade secret or        */
+/* copyright law.  Dissemination of this information or            */
+/* reproduction of this material is strictly forbidden unless      */
+/* prior written permission is obtained from Blankly Finance       */
+/* Incorporated.                                                   */
+/*                                                                 */
+/*******************************************************************/
+
+import MediumBlackButton from "@/components/general/buttons/MediumBlackButton";
+import {useEffect, useState} from "react";
+import KeyModal from "@/components/settings/model-settings/modals/KeyModal";
+import {processEpochDiffFromNow} from "@/utils/date";
+import {useRouter} from "next/router";
+import {useAuth} from "@/libs/auth";
+import {listKeys} from "@/services/deployment-api-store";
+import {classNames} from "@/utils/general";
+import ProfileIcon from "@/components/general/profile/ProfileIcon";
+import MoreDotsKeys from "@/components/keys/MoreDotsKeys";
+
+const ApiKeyModal = (props: any) => {
+  const router = useRouter();
+  const { projectId } = router.query;
+
+  const [keyModal, setKeyModal] = useState(false);
+  const [keys, setKeys] = useState([]);
+  const { token, uid } = useAuth()
+  const [changed, setChanged] = useState(false);
+
+  const [showOverflow, setOverflow] = useState(false);
+
+  useEffect(() => {
+    if (token) {
+      listKeys(token, projectId as string).then((response: any) => {
+        setKeys(response.keys);
+        setChanged(false);
+      })
+    }
+  }, [projectId, token, changed])
+
+  return (
+    <div className="flex flex-col w-full items-center justify-start mt-8">
+      <div className="h-fit w-full relative bg-white rounded-lg border border-gray-200 mb-8">
+        <div className="p-8 mb-16">
+          <h1 className="mb-6 text-2xl font-bold text-black">
+            API Keys
+          </h1>
+          <p className="block mb-2 text-sm text-gray-400">Programmatically interact with Blankly outside the
+            Blankly Platform</p>
+          <div className="mt-4">
+            <MediumBlackButton click={() => setKeyModal(true)}>Generate New Key</MediumBlackButton>
+          </div>
+          <h1 className="text-lg font-medium mt-8">User-Generated Keys</h1>
+          <div
+            className={classNames(showOverflow ? "" : "overflow-hidden", "mt-2 hidden md:block border border-gray-200 rounded-md h-auto")}
+          >
+            <table className="min-w-full table-fixed divide-y px-4 divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th
+                    scope="col"
+                    className="pl-5 pr-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    API Key ID
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Key Name
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Read Access
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Write Access
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+
+                  </th>
+                  <th />
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {keys.filter((val: any) => val.autogenerated === false).map((keys: any, index: number) => {
+                  return (
+                    <tr key={keys.id}>
+                      <td width="23%" className="pl-5 py-4 whitespace-nowrap">
+                        <div className="font-semibold text-sm text-gray-900">
+                          {keys.id}
+                        </div>
+                      </td>
+                      <td width="50%" className="px-3 py-4 whitespace-nowrap text-sm">
+                        {keys.name.slice(0, 45)}{keys.name.length > 45 ? "..." : ""}
+                      </td>
+                      <td width="10%"
+                        className="px-3 py-4 whitespace-nowrap text-sm text-left text-gray-500">
+                        {keys.read ? "True" : "False"}
+                      </td>
+                      <td width="10%"
+                        className="px-3 py-4 whitespace-nowrap text-sm text-left text-gray-500">
+                        {keys.write ? "True" : "False"}
+                      </td>
+                      <td width="10%" className="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <div className="flex justify-end">
+                          <div className="text-sm text-gray-500 max-w-sm">
+                            Created {processEpochDiffFromNow(keys.timestamp)} by
+                          </div>
+                          <div
+                            className="w-5 h-5 rounded-full overflow-hidden object-cover relative  ml-2">
+                            <ProfileIcon id={keys.uid ? keys.uid : keys.projectId} />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="pr-3" onClick={() => setOverflow(true)}>
+                        <MoreDotsKeys update={() => { setChanged(true) }} keyId={keys.id} />
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <h1 className="text-lg font-medium mt-8">Auto-Generated Keys</h1>
+          <div
+            className={classNames(showOverflow ? "" : "overflow-hidden", "mt-2 hidden md:block border border-gray-200 rounded-md h-auto")}
+          >
+            <table className="min-w-full table-fixed divide-y px-4 divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th
+                    scope="col"
+                    className="pl-5 pr-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    API Key ID
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Key Name
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Read Access
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Write Access
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+
+                  </th>
+                  <th />
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {keys.filter((val: any) => val.autogenerated === true).map((keys: any, index: number) => {
+                  return (
+                    <tr key={keys.id}>
+                      <td width="23%" className="pl-5 py-4 whitespace-nowrap">
+                        <div className="font-semibold text-sm text-gray-900">
+                          {keys.id}
+                        </div>
+                      </td>
+                      <td width="15%" className="px-3 py-4 whitespace-nowrap text-sm">
+                        {keys.name.slice(0, 45)}{keys.name.length > 45 ? "..." : ""}
+                      </td>
+                      <td width="50%"
+                        className="px-3 py-4 whitespace-nowrap text-sm text-left text-gray-500">
+                        {keys.read ? "True" : "False"}
+                      </td>
+                      <td width="50%"
+                        className="px-3 py-4 whitespace-nowrap text-sm text-left text-gray-500">
+                        {keys.write ? "True" : "False"}
+                      </td>
+                      <td width="10%" className="px-3 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <div className="flex justify-end">
+                          <div className="text-sm text-gray-500 max-w-sm">
+                            Created {processEpochDiffFromNow(keys.timestamp)} by
+                          </div>
+                          <div
+                            className="w-5 h-5 rounded-full overflow-hidden object-cover relative  ml-2">
+                            <ProfileIcon id={uid} />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="pr-3" onClick={() => setOverflow(true)}>
+                        <MoreDotsKeys update={() => { setChanged(true) }} keyId={keys.id} />
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div
+          className="absolute w-full rounded-b-lg h-16 bottom-0 bg-gray-100 flex flex-row justify-between px-8 items-center">
+          <p className="text-gray-400 text-sm">Generate keys to use the Slate SDK</p>
+        </div>
+        <KeyModal open={keyModal} close={() => setKeyModal(false)} />
+      </div>
+    </div>
+  );
+}
+
+export default ApiKeyModal;

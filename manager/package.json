@@ -1,0 +1,32 @@
+{
+  "name": "blankly_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blankly/deprecated/communication.js",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "scripts": {
+    "start": "node ./blankly/main.js",
+    "run_exec": "./dist/main-macos",
+    "build": "node minify.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "npm": "^7.20.6",
+    "terser": "^5.7.1",
+    "util": "^0.12.4",
+    "yargs": "^17.1.1",
+    "zeromq": "^5.2.8"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3",
+    "pkg": "4.5.1",
+    "mocha": "^9.1.3",
+    "@google-cloud/storage": "^5.16.1",
+    "expect.js": "^0.3.1"
+  }
+}

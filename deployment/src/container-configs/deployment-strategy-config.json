@@ -1,0 +1,50 @@
+{
+  "kind": "Deployment",
+  "spec": {
+    "template": {
+      "spec": {
+        "restartPolicy": "Always",
+        "containers": [
+          {
+            "name": "<Modified to ID>",
+            "image": "<Modified to URL>",
+            "ports": [
+              {
+                "containerPort": 8000
+              }
+            ],
+            "resources": {
+              "requests":{
+                "memory": "<128Mi means 128 Megabytes>",
+                "cpu": "<125m means 125 millicpu>"
+              },
+              "limits": {
+                "memory": "<128Mi means 128 Megabytes>",
+                "cpu": "<125m means 125 millicpu>"
+              }
+            },
+            "env": []
+          }
+        ]
+      },
+      "metadata": {
+        "labels": {
+          "model": "strategy"
+        }
+      }
+    },
+    "selector": {
+      "matchLabels": {
+        "model": "strategy"
+      }
+    }
+  },
+  "apiVersion": "apps/v1",
+  "metadata": {
+    "labels": {
+      "model": "strategy",
+      "plan": "basic"
+    },
+    "name": "<change to version ID + timestamp>"
+  }
+}

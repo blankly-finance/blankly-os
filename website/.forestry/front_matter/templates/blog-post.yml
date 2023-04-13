@@ -1,0 +1,81 @@
+---
+label: Blog Post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- name: readingTime
+  type: number
+  label: Reading Time
+  description: The time it takes "in minutes" to finish reading this (should always
+    be greater than 1)
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: authorName
+  type: text
+  config:
+    required: true
+  label: Author Name
+  description: The name of the author that wrote this article
+- name: authorImage
+  type: file
+  config:
+    maxSize: 64
+  label: Author Image
+  description: A headshot / image of the author of the blog
+- name: date
+  type: datetime
+  description: The current date that the blog is being published on.
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+    export_format: ''
+  label: Date
+- name: category
+  type: text
+  config:
+    required: true
+  label: Category
+  description: The category that the blog belongs in.
+- name: categoryClass
+  type: text
+  config:
+    required: false
+  label: Category Class
+  description: The background color of the category.
+- name: categoryText
+  type: text
+  config:
+    required: false
+  label: Category Text
+  description: The color of the text of the category tag (use tailwind-css)
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+  description: The Image that is displayed on the blog page
+pages:
+- content/1b-valuation-blankly-platform-early-access.md
+- content/blankly-2021-year-in-review.md
+- content/blankly-platform-early-demo-new-blog-page-youtube-channel-launch.md
+- content/how-to-add-a-community-trading-bot-on-discord.md
+- content/how-to-build-a-crypto-price-monitoring-discord-bot.md
+- content/kucoin-and-ftx-integrations-500-stars-discord-ama-event.md
+- content/marketing-to-developers-is-difficult-but-rewarding.md
+- content/meet-the-founders-brandon-fan-cofounder-and-ceo.md
+- content/reddit-success-new-website-oanda-support.md
+- content/the-rise-of-crypto-hedge-funds.md
+- content/we-got-into-z-fellows.md
+- content/why-building-a-trading-algorithm-is-more-than-just-the-strategy.md
+- content/why-you-shouldn-t-use-a-no-code-trading-platform.md

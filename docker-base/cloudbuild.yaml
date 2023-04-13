@@ -1,0 +1,5 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '.', '-t', 'us-docker.pkg.dev/blankly-6ada5/blankly-base/blankly-base:${_PY_VERSION}', '--build-arg', 'PY_VERSION=$_PY_VERSION']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push',              'us-docker.pkg.dev/blankly-6ada5/blankly-base/blankly-base:${_PY_VERSION}']

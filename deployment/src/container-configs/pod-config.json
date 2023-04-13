@@ -1,0 +1,27 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "name": "strategy"
+  },
+  "spec": {
+    "restartPolicy": "Never",
+    "containers": [
+      {
+        "name": "<Modified to ID>",
+        "image": "<Modified to URL>",
+        "resources": {
+          "requests":{
+            "memory": "<128Mi means 128 Megabytes>",
+            "cpu": "<125m means 125 millicpu>"
+          },
+          "limits": {
+            "memory": "<128Mi means 128 Megabytes>",
+            "cpu": "<125m means 125 millicpu>"
+          }
+        },
+        "env": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '.', '-t', 'us-docker.pkg.dev/${_GCP_PROJECT_ID}/models/${_PROJECT_ID}-${_MODEL_ID}:${_VERSION_ID}', '--build-arg', 'BLANKLY_BASE_IMAGE=${_BASE_IMAGE}']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-docker.pkg.dev/${_GCP_PROJECT_ID}/models/${_PROJECT_ID}-${_MODEL_ID}:${_VERSION_ID}']

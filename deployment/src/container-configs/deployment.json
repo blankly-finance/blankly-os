@@ -1,0 +1,48 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "strategy"
+  },
+  "spec": {
+
+    "selector": {
+      "matchLabels": {
+        "model": "strategy"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "model": "strategy"
+        }
+      },
+
+
+      "spec": {
+        "containers": [
+          {
+            "name": "<Modified to ID>",
+            "image": "<Modified to URL>",
+            "ports": [
+              {
+                "containerPort": 8000
+              }
+            ],
+            "resources": {
+              "requests":{
+                "memory": "<128Mi means 128 Megabytes>",
+                "cpu": "<125m means 125 millicpu>"
+              },
+              "limits": {
+                "memory": "<128Mi means 128 Megabytes>",
+                "cpu": "<125m means 125 millicpu>"
+              }
+            },
+            "env": []
+          }
+        ]
+      }
+    }
+  }
+}
